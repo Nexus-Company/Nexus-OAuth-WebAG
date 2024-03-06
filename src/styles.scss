@@ -20,7 +20,7 @@ $Nexus-OAuth-WebAG-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$Nexus-OAuth-WebAG-theme: mat.define-light-theme((
+$Nexus-OAuth-WebAG-theme: mat.define-dark-theme((
   color: (
     primary: $Nexus-OAuth-WebAG-primary,
     accent: $Nexus-OAuth-WebAG-accent,
@@ -32,8 +32,3 @@ $Nexus-OAuth-WebAG-theme: mat.define-light-theme((
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include mat.all-component-themes($Nexus-OAuth-WebAG-theme);
-
-/* You can add global styles to this file, and also import other style files */
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
