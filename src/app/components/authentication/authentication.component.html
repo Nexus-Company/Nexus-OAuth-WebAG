@@ -29,7 +29,7 @@
         <div *ngIf="ActualStep == 3" id="loader" class="step">
             <app-loader></app-loader>
         </div>
-        
-        <button mat-raised-button color="primary" (click)="nextStepButton()"> Next </button>
+
+        <button *ngIf="ShowNext" mat-raised-button color="primary" (click)="nextStepButton()"> Next </button>
     </mat-card-content>
 </mat-card>

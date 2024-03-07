@@ -26,14 +26,14 @@ export enum Step {
 })
 
 export class AuthenticationComponent implements OnInit {
-
   ActualStep: Step = Step.FirstStep;
+  ShowNext: boolean = true;
 
   @Input() User: string = '';
   @Input() Password: string = '';
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+
   }
 
   nextStepButton() {
@@ -41,5 +41,7 @@ export class AuthenticationComponent implements OnInit {
 
     if (this.ActualStep > Step.TwoFactor)
       this.ActualStep = Step.FirstStep;
+
+    // this.ShowNext = this.ActualStep != Step.Loading;
   }
 }

@@ -9,5 +9,5 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-
+  
 }
