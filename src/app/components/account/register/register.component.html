@@ -1,0 +1,99 @@
+<p-card header="Cadastro">
+    <div class="field ">
+        <p-floatLabel>
+            <input id="Name" type="text" pInputText [(ngModel)]="Name" />
+            <label for="Name">Nome*</label>
+            <span class="p-input-icon-right">
+                <i class="pi pi-user"></i>
+            </span>
+        </p-floatLabel>
+
+        <small id="Name-help">
+        </small>
+    </div>
+
+    <div class="field">
+        <p-floatLabel>
+            <input id="Email" type="email" pInputText [(ngModel)]="Email" />
+            <label for="Email">Email*</label>
+            <span class="p-input-icon-right">
+                <i class="pi pi-at"></i>
+            </span>
+        </p-floatLabel>
+
+        <small id="Email-help">
+        </small>
+    </div>
+
+    <div class="field">
+        <p-floatLabel>
+            <p-calendar id="DateOfBirth" [(ngModel)]="DateOfBirth" [iconDisplay]="'input'" [showIcon]="true"
+                [ngModelOptions]="{standalone: true}" inputId="icondisplay" />
+
+            <label for="DateOfBirth">Data de Nascimento</label>
+        </p-floatLabel>
+
+        <small id="DateOfBirth-help">
+        </small>
+    </div>
+
+    <div class="field ">
+        <p-floatLabel>
+            <p-inputMask id="Phone" mask="(99) 99999-9999" [(ngModel)]="Phone" placeholder="(99) 99999-9999"
+                [ngModelOptions]="{standalone: true}" />
+            <label for="Phone">Número de Telefone</label>
+            <span class="p-input-icon-right">
+                <i class="pi pi-phone"></i>
+            </span>
+        </p-floatLabel>
+
+        <small id="Phone-help">
+        </small>
+    </div>
+
+    <div class="field">
+        <p-floatLabel>
+            <p-password id="Password" [(ngModel)]="Password" [toggleMask]="true" promptLabel="Escreva uma senha"
+                weakLabel="Muito simples" mediumLabel="Deixe-a mais complexa" strongLabel="Suficientemente boa!"
+                [ngModelOptions]="{standalone: true}">
+                <ng-template pTemplate="header">
+                    <h6>Pick a password</h6>
+                </ng-template>
+                <ng-template pTemplate="footer">
+                    <p-divider />
+                    <p class="mt-2">Sugestões</p>
+                    <ul class="pl-2 ml-2 mt-0" style="line-height: 1.5">
+                        <li>Letra minuscula</li>
+                        <li>Letra maiscula</li>
+                        <li>Caracter numérico</li>
+                        <li>Minimo de 8 caracteres</li>
+                    </ul>
+                </ng-template>
+            </p-password>
+            <label for="Password">Senha</label>
+        </p-floatLabel>
+
+        <small id="Password-help">
+        </small>
+    </div>
+
+    <div class="field">
+        <p-floatLabel>
+            <p-password id="ConfirmPassword" [ngModelOptions]="{standalone: true}" [(ngModel)]="ConfirmPassword"
+                [toggleMask]="true" [feedback]="false">
+            </p-password>
+            <label for="ConfirmPassword">Confirmar a senha</label>
+        </p-floatLabel>
+
+        <small id="confirm-password-help">
+        </small>
+    </div>
+
+    <div class="field">
+        <p-checkbox [ngModelOptions]="{standalone: true}" [(ngModel)]="AcceptTerms" [binary]="true"
+            inputId="acceptTerms" />
+        <label for="acceptTerms">Aceitar termos</label>
+    </div>
+
+    <p-button label="Finalizar" (onClick)="createAccount()" />
+</p-card>

@@ -1,19 +1,15 @@
-import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { AuthenticationComponent } from './authentication/authentication.component';
-import { AccountComponent } from './account/account.component';
+import { Routes } from '@angular/router';
 import { AuthGuard } from './auth.guard';
-import { NgModule, inject } from '@angular/core';
+import { HomeComponent } from './components/home/home.component';
+import { AuthenticationComponent } from './components/authentication/authentication.component';
+import { MeComponent } from './components/account/me/me.component';
+import { RegisterComponent } from './components/account/register/register.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'authentication', component: AuthenticationComponent },
-    { path: 'account', component: AccountComponent, canActivate: [AuthGuard] }
+    { path: 'account/register', component: RegisterComponent },
+    { path: 'account', component: MeComponent, canActivate: [AuthGuard] }
 ];
-
-@NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
-})
 
 export class AppRoutingModule { }

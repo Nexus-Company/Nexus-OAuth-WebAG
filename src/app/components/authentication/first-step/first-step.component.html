@@ -1,0 +1,10 @@
+<div class="flex flex-column gap-2 p-fluid w-full">
+    <label for="username">Usuário</label>
+    <input pInputText id="username" aria-describedby="username-help" placeholder="Seu usuário"
+        [(ngModel)]="UserName" />
+    <small id="username-help">
+        Ainda não tenho usuário.
+    </small>
+</div>
+
+<p-button label="Próximo" (onClick)="nextClicked()"></p-button>

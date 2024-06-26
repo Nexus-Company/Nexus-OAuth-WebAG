@@ -1,0 +1,17 @@
+export * from './account.service';
+import { AccountService } from './account.service';
+export * from './applications.service';
+import { ApplicationsService } from './applications.service';
+export * from './authenticationTwoFactor.service';
+import { AuthenticationTwoFactorService } from './authenticationTwoFactor.service';
+export * from './authentications.service';
+import { AuthenticationsService } from './authentications.service';
+export * from './authenticationsQrCode.service';
+import { AuthenticationsQrCodeService } from './authenticationsQrCode.service';
+export * from './files.service';
+import { FilesService } from './files.service';
+export * from './metrics.service';
+import { MetricsService } from './metrics.service';
+export * from './oAuth.service';
+import { OAuthService } from './oAuth.service';
+export const APIS = [AccountService, ApplicationsService, AuthenticationTwoFactorService, AuthenticationsService, AuthenticationsQrCodeService, FilesService, MetricsService, OAuthService];
